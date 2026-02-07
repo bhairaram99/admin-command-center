@@ -1,73 +1,90 @@
-# Welcome to your Lovable project
+# AI Humanizer - Admin Command Center
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This is the admin dashboard for the AI Humanizer platform. It provides a comprehensive interface for managing users, subscription plans, token add-ons, AI settings, and payment configurations.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **Dashboard**: Overview of users, revenue, and token usage
+- **User Management**: View, block, and manage user accounts
+- **Plans Management**: Create and manage subscription plans
+- **Token Add-ons**: Configure additional token packages
+- **AI Settings**: Configure AI providers and settings
+- **Payment Settings**: Manage payment gateways and currencies
+- **Token Rules**: Set token limits for different user types
 
-**Use Lovable**
+## Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Prerequisites
 
-Changes made via Lovable will be committed automatically to this repo.
+- Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Step 1: Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Navigate to the admin-command-center directory
+cd admin-command-center
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The admin panel will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## How to Access
 
-**Use GitHub Codespaces**
+1. Navigate to the admin login page
+2. Enter admin credentials (configured in backend)
+3. Access all administrative features
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technologies Used
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vite** - Build tool and dev server
+- **TypeScript** - Type-safe JavaScript
+- **React** - UI library
+- **shadcn-ui** - Component library
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+- **TanStack Query** - Data fetching and caching
 
-## How can I deploy this project?
+## Project Structure
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+```
+admin-command-center/
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── contexts/       # Auth context
+│   ├── hooks/          # Custom React hooks
+│   ├── lib/            # Utilities and API
+│   ├── pages/          # Admin page components
+│   └── test/           # Test files
+├── public/             # Static assets
+└── package.json        # Dependencies
+```
 
-## Can I connect a custom domain to my Lovable project?
+## Deployment
 
-Yes, you can!
+Build the project for production:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```sh
+npm run build
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The `dist` folder will contain the production-ready files.
+
+## Environment Variables
+
+Configure the backend API URL if needed in your `.env` file or build configuration.
+
+## License
+
+Private - All rights reserved

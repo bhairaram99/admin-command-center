@@ -58,8 +58,8 @@ const AdminLogin = () => {
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 mb-4">
             <Zap className="w-7 h-7 text-primary" />
           </div>
-          <h1 className="text-2xl font-bold text-foreground">Admin Panel</h1>
-          <p className="text-sm text-muted-foreground mt-1">AI Text Humanizer Control Center</p>
+          <h1 className="text-2xl font-bold text-foreground">AI Humanizer Admin</h1>
+          <p className="text-sm text-muted-foreground mt-1">Administration Control Center</p>
         </motion.div>
 
         {/* Login Card */}

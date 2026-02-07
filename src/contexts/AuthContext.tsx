@@ -21,10 +21,17 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   });
 
   const login = useCallback(async (email: string, password: string): Promise<boolean> => {
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 800));
-
+    // Validate admin credentials
     if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+      // Verify backend is reachable
+      try {
+        const res = await fetch('http://localhost:5000/health');
+        if (!res.ok) throw new Error('Backend not available');
+      } catch {
+        // Still allow login even if backend is temporarily down
+        console.warn('Backend health check failed, proceeding with login anyway');
+      }
+      
       setIsAuthenticated(true);
       setAdminEmail(email);
       sessionStorage.setItem('admin_auth', 'true');
